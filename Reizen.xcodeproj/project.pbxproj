@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3084FD4E253FF15C0095EB34 /* WhirlyGlobeMaplyComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3084FD4D253FF15C0095EB34 /* WhirlyGlobeMaplyComponent.framework */; };
+		3084FD50253FF17B0095EB34 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3084FD4F253FF17B0095EB34 /* CoreLocation.framework */; };
+		3084FD52253FF1B30095EB34 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3084FD51253FF1B30095EB34 /* libc++.tbd */; };
+		3084FD57253FF1C40095EB34 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3084FD56253FF1C40095EB34 /* libz.tbd */; };
+		3084FD5C253FF1D60095EB34 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3084FD5B253FF1D60095EB34 /* libxml2.tbd */; };
+		3084FD61253FF1E70095EB34 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3084FD60253FF1E70095EB34 /* libsqlite3.tbd */; };
+		3084FD6F2540B0290095EB34 /* geography-class_medres.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 3084FD6E2540B0290095EB34 /* geography-class_medres.mbtiles */; };
 		30D423F22536B57E0078409E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D423F12536B57E0078409E /* AppDelegate.swift */; };
 		30D423F42536B57E0078409E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D423F32536B57E0078409E /* SceneDelegate.swift */; };
 		30D423F62536B57E0078409E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D423F52536B57E0078409E /* ViewController.swift */; };
@@ -35,6 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3084FD4D253FF15C0095EB34 /* WhirlyGlobeMaplyComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WhirlyGlobeMaplyComponent.framework; path = "WhirlyGlobe-Maply_Distribution_2_5/WhirlyGlobeMaplyComponent.framework"; sourceTree = "<group>"; };
+		3084FD4F253FF17B0095EB34 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3084FD51253FF1B30095EB34 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		3084FD56253FF1C40095EB34 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		3084FD5B253FF1D60095EB34 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		3084FD60253FF1E70095EB34 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		3084FD6E2540B0290095EB34 /* geography-class_medres.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = "geography-class_medres.mbtiles"; path = "WhirlyGlobe-Maply_Distribution_2_5/WhirlyGlobeMaplyComponent.framework/geography-class_medres.mbtiles"; sourceTree = "<group>"; };
 		30D423EE2536B57E0078409E /* Reizen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reizen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D423F12536B57E0078409E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30D423F32536B57E0078409E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +70,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3084FD61253FF1E70095EB34 /* libsqlite3.tbd in Frameworks */,
+				3084FD5C253FF1D60095EB34 /* libxml2.tbd in Frameworks */,
+				3084FD57253FF1C40095EB34 /* libz.tbd in Frameworks */,
+				3084FD52253FF1B30095EB34 /* libc++.tbd in Frameworks */,
+				3084FD50253FF17B0095EB34 /* CoreLocation.framework in Frameworks */,
+				3084FD4E253FF15C0095EB34 /* WhirlyGlobeMaplyComponent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +96,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3084FD4C253FF15C0095EB34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3084FD6E2540B0290095EB34 /* geography-class_medres.mbtiles */,
+				3084FD60253FF1E70095EB34 /* libsqlite3.tbd */,
+				3084FD5B253FF1D60095EB34 /* libxml2.tbd */,
+				3084FD56253FF1C40095EB34 /* libz.tbd */,
+				3084FD51253FF1B30095EB34 /* libc++.tbd */,
+				3084FD4F253FF17B0095EB34 /* CoreLocation.framework */,
+				3084FD4D253FF15C0095EB34 /* WhirlyGlobeMaplyComponent.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		30D423E52536B57E0078409E = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +117,7 @@
 				30D424072536B57F0078409E /* ReizenTests */,
 				30D424122536B57F0078409E /* ReizenUITests */,
 				30D423EF2536B57E0078409E /* Products */,
+				3084FD4C253FF15C0095EB34 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -231,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3084FD6F2540B0290095EB34 /* geography-class_medres.mbtiles in Resources */,
 				30D423FE2536B57F0078409E /* LaunchScreen.storyboard in Resources */,
 				30D423FB2536B57F0078409E /* Assets.xcassets in Resources */,
 				30D423F92536B57E0078409E /* Main.storyboard in Resources */,
@@ -372,6 +408,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/blakeculbert/Desktop/WhirlyGlobe-Maply_Distribution_2_5/WhirlyGlobeMaplyComponent.framework/Headers/MaplyBridge.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -426,6 +463,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/blakeculbert/Desktop/WhirlyGlobe-Maply_Distribution_2_5/WhirlyGlobeMaplyComponent.framework/Headers/MaplyBridge.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -437,6 +475,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WhirlyGlobe-Maply_Distribution_2_5",
+				);
+				HEADER_SEARCH_PATHS = "/Users/blakeculbert/Desktop/Reizen/WhirlyGlobe-Maply_Distribution_2_5/WhirlyGlobeMaplyComponent.framework/Headers/";
 				INFOPLIST_FILE = Reizen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -444,6 +487,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Culbert.Reizen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/blakeculbert/Desktop/Reizen/WhirlyGlobe-Maply_Distribution_2_5/WhirlyGlobeMaplyComponent.framework/Headers/MaplyBridge.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -455,6 +499,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WhirlyGlobe-Maply_Distribution_2_5",
+				);
+				HEADER_SEARCH_PATHS = "/Users/blakeculbert/Desktop/Reizen/WhirlyGlobe-Maply_Distribution_2_5/WhirlyGlobeMaplyComponent.framework/Headers/";
 				INFOPLIST_FILE = Reizen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -462,6 +511,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Culbert.Reizen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/blakeculbert/Desktop/Reizen/WhirlyGlobe-Maply_Distribution_2_5/WhirlyGlobeMaplyComponent.framework/Headers/MaplyBridge.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
