@@ -14,6 +14,7 @@
 		3084FD5C253FF1D60095EB34 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3084FD5B253FF1D60095EB34 /* libxml2.tbd */; };
 		3084FD61253FF1E70095EB34 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3084FD60253FF1E70095EB34 /* libsqlite3.tbd */; };
 		3084FD6F2540B0290095EB34 /* geography-class_medres.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 3084FD6E2540B0290095EB34 /* geography-class_medres.mbtiles */; };
+		3084FD85255257CA0095EB34 /* mountain_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3084FD84255257CA0095EB34 /* mountain_icon.png */; };
 		30D423F22536B57E0078409E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D423F12536B57E0078409E /* AppDelegate.swift */; };
 		30D423F42536B57E0078409E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D423F32536B57E0078409E /* SceneDelegate.swift */; };
 		30D423F62536B57E0078409E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D423F52536B57E0078409E /* ViewController.swift */; };
@@ -49,6 +50,7 @@
 		3084FD5B253FF1D60095EB34 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		3084FD60253FF1E70095EB34 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		3084FD6E2540B0290095EB34 /* geography-class_medres.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = "geography-class_medres.mbtiles"; path = "WhirlyGlobe-Maply_Distribution_2_5/WhirlyGlobeMaplyComponent.framework/geography-class_medres.mbtiles"; sourceTree = "<group>"; };
+		3084FD84255257CA0095EB34 /* mountain_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mountain_icon.png; path = ../../../Downloads/mountain_icon.png; sourceTree = "<group>"; };
 		30D423EE2536B57E0078409E /* Reizen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reizen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D423F12536B57E0078409E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30D423F32536B57E0078409E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				30D423FA2536B57F0078409E /* Assets.xcassets */,
 				30D423FC2536B57F0078409E /* LaunchScreen.storyboard */,
 				30D423FF2536B57F0078409E /* Info.plist */,
+				3084FD84255257CA0095EB34 /* mountain_icon.png */,
 			);
 			path = Reizen;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3084FD6F2540B0290095EB34 /* geography-class_medres.mbtiles in Resources */,
+				3084FD85255257CA0095EB34 /* mountain_icon.png in Resources */,
 				30D423FE2536B57F0078409E /* LaunchScreen.storyboard in Resources */,
 				30D423FB2536B57F0078409E /* Assets.xcassets in Resources */,
 				30D423F92536B57E0078409E /* Main.storyboard in Resources */,

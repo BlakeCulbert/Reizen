@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         theViewC = WhirlyGlobeViewController()
         self.view.addSubview(theViewC!.view)
         theViewC!.view.frame = self.view.bounds
-        addChild(theViewC!)
+        hikeLocations()
         
         let globeViewC = theViewC as? WhirlyGlobeViewController
         let mapViewC = theViewC as? MaplyViewController
@@ -83,5 +83,38 @@ class ViewController: UIViewController {
         
       }
 
+    
+    private func hikeLocations() {
+        // need coordinates for locations of hikes, add coords to list
+        let locations = [
+            MaplyCoordinateMakeWithDegrees(-122.4192,3.7793),
+            MaplyCoordinateMakeWithDegrees(-77.036667, 38.895111),
+            MaplyCoordinateMakeWithDegrees(120.966667, 14.583333),
+            MaplyCoordinateMakeWithDegrees(55.75, 37.616667),
+            MaplyCoordinateMakeWithDegrees(-0.1275, 51.507222),
+            MaplyCoordinateMakeWithDegrees(-66.916667, 10.5),
+            MaplyCoordinateMakeWithDegrees(139.6917, 35.689506),
+            MaplyCoordinateMakeWithDegrees(166.666667, -77.85),
+            MaplyCoordinateMakeWithDegrees(-58.383333, -34.6),
+            MaplyCoordinateMakeWithDegrees(-74.075833, 4.598056),
+            MaplyCoordinateMakeWithDegrees(-79.516667, 8.983333),
+            MaplyCoordinateMakeWithDegrees(-5.7043173, 40.9634332)
+        ]
+        
+        let icon = UIImage(named: "mountain_icon.png")
+        
+        
+        let markers = locations.map { cap -> MaplyScreenMarker in
+                let marker = MaplyScreenMarker()
+                marker.image = icon
+                marker.loc = cap
+                marker.size = CGSize(width: 40,height: 40)
+                return marker
+        
+        }
+        
+        theViewC?.addScreenMarkers(markers, desc: nil)
+        
+    }
 
 }
