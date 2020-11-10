@@ -23,6 +23,7 @@
 		30D423FE2536B57F0078409E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D423FC2536B57F0078409E /* LaunchScreen.storyboard */; };
 		30D424092536B57F0078409E /* ReizenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D424082536B57F0078409E /* ReizenTests.swift */; };
 		30D424142536B57F0078409E /* ReizenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D424132536B57F0078409E /* ReizenUITests.swift */; };
+		30EEDA262553CB5B009CD277 /* MarkerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EEDA252553CB5B009CD277 /* MarkerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		30D4240F2536B57F0078409E /* ReizenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReizenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D424132536B57F0078409E /* ReizenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReizenUITests.swift; sourceTree = "<group>"; };
 		30D424152536B57F0078409E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30EEDA252553CB5B009CD277 /* MarkerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				30D423F12536B57E0078409E /* AppDelegate.swift */,
 				30D423F32536B57E0078409E /* SceneDelegate.swift */,
 				30D423F52536B57E0078409E /* ViewController.swift */,
+				30EEDA252553CB5B009CD277 /* MarkerViewController.swift */,
 				30D423F72536B57E0078409E /* Main.storyboard */,
 				30D423FA2536B57F0078409E /* Assets.xcassets */,
 				30D423FC2536B57F0078409E /* LaunchScreen.storyboard */,
@@ -300,6 +303,7 @@
 			files = (
 				30D423F62536B57E0078409E /* ViewController.swift in Sources */,
 				30D423F22536B57E0078409E /* AppDelegate.swift in Sources */,
+				30EEDA262553CB5B009CD277 /* MarkerViewController.swift in Sources */,
 				30D423F42536B57E0078409E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

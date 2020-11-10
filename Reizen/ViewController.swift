@@ -7,9 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    private var theViewC: MaplyBaseViewController?
+class ViewController: UIViewController,
+                      WhirlyGlobeViewControllerDelegate{
     
+    private var theViewC: MaplyBaseViewController?
 
     override func viewDidLoad() {
         
@@ -22,7 +23,9 @@ class ViewController: UIViewController {
         hikeLocations()
         
         let globeViewC = theViewC as? WhirlyGlobeViewController
-        let mapViewC = theViewC as? MaplyViewController
+        if let globeViewC = globeViewC {
+            globeViewC.delegate = self
+        }
         
         // we want a black background for a globe, a white background for a map.
         theViewC!.clearColor = (globeViewC != nil) ? UIColor.black : UIColor.white
@@ -51,7 +54,7 @@ class ViewController: UIViewController {
             // Data by OpenStreetMap under the Open Data Commons Open Database License.
             guard let tileSource = MaplyRemoteTileSource(
                     baseURL: "http://tile.stamen.com/terrain/",
-                    ext: "jpg",
+                    ext: "png",
                     minZoom: 0,
                     maxZoom: 18) else {
                 // can't create remote tile source
@@ -75,14 +78,8 @@ class ViewController: UIViewController {
             globeViewC.height = 0.8
             globeViewC.animate(toPosition: MaplyCoordinateMakeWithDegrees(-3.6704803,40.5023056), time: 1.0)
         }
-        else if let mapViewC = mapViewC {
-            mapViewC.height = 1.0
-            mapViewC.animate(toPosition: MaplyCoordinateMakeWithDegrees(-3.6704803,40.5023056), time: 1.0)
-        }
-        
         
       }
-
     
     private func hikeLocations() {
         // need coordinates for locations of hikes, add coords to list
@@ -103,6 +100,8 @@ class ViewController: UIViewController {
         
         let icon = UIImage(named: "mountain_icon.png")
         
+        icon?.accessibilityRespondsToUserInteraction = true;
+        
         
         let markers = locations.map { cap -> MaplyScreenMarker in
                 let marker = MaplyScreenMarker()
@@ -116,6 +115,40 @@ class ViewController: UIViewController {
         theViewC?.addScreenMarkers(markers, desc: nil)
         
     }
+    
+    private func addAnnotation(title: String, subtitle: String, loc: MaplyCoordinate) {
+        theViewC?.clearAnnotations()
+        
+        let a = MaplyAnnotation()
+        a.title = title
+        a.subTitle = subtitle
+        
+        theViewC?.addAnnotation(a, forPoint: loc, offset: CGPoint.zero)
+    }
+    
+    private func markerSelection(selectedObject: NSObject) {
+        if let selectedObject = selectedObject as? MaplyVectorObject {
+            let loc = selectedObject.centroid()
+            if loc.x != kMaplyNullCoordinate.x {
+                let title = "Selected:"
+                let subtitle = selectedObject.userObject as! String
+                addAnnotation(title: title, subtitle: subtitle, loc: loc)
+            }
+        }
+        else if selectedObject is MaplyScreenMarker {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "MarkerViewController") as! MarkerViewController
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
 
+    func globeViewController(_ viewC: WhirlyGlobeViewController, didTapAt coord: MaplyCoordinate) {
+        let subtitle = NSString(format: "(%.2fN, %.2fE)", coord.y*57.296, coord.x*57.296) as String
+        addAnnotation(title: "Tap!", subtitle: subtitle, loc: coord)
+    }
+    
+    func globeViewController(_ viewC: WhirlyGlobeViewController, didSelect selectedObject: NSObject) {
+        markerSelection(selectedObject: selectedObject)
+    }
+    
 }
 // test change for test commit.
