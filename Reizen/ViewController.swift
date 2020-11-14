@@ -73,10 +73,10 @@ class ViewController: UIViewController,
         layer.singleLevelLoading = false
         theViewC!.add(layer)
         
-        // start up over Madrid, center of the old-world
+        // start over the United States
         if let globeViewC = globeViewC {
             globeViewC.height = 0.8
-            globeViewC.animate(toPosition: MaplyCoordinateMakeWithDegrees(-3.6704803,40.5023056), time: 1.0)
+            globeViewC.animate(toPosition: MaplyCoordinateMakeWithDegrees(-100.230093, 38.685510), time: 1.0)
         }
         
       }
@@ -84,18 +84,10 @@ class ViewController: UIViewController,
     private func hikeLocations() {
         // need coordinates for locations of hikes, add coords to list
         let locations = [
-            MaplyCoordinateMakeWithDegrees(-122.4192,3.7793),
-            MaplyCoordinateMakeWithDegrees(-77.036667, 38.895111),
-            MaplyCoordinateMakeWithDegrees(120.966667, 14.583333),
-            MaplyCoordinateMakeWithDegrees(55.75, 37.616667),
-            MaplyCoordinateMakeWithDegrees(-0.1275, 51.507222),
-            MaplyCoordinateMakeWithDegrees(-66.916667, 10.5),
-            MaplyCoordinateMakeWithDegrees(139.6917, 35.689506),
-            MaplyCoordinateMakeWithDegrees(166.666667, -77.85),
-            MaplyCoordinateMakeWithDegrees(-58.383333, -34.6),
-            MaplyCoordinateMakeWithDegrees(-74.075833, 4.598056),
-            MaplyCoordinateMakeWithDegrees(-79.516667, 8.983333),
-            MaplyCoordinateMakeWithDegrees(-5.7043173, 40.9634332)
+            // Wonderland Trail, Mount Rainier National Park, Washington
+            MaplyCoordinateMakeWithDegrees(-121.818070, 46.737700),
+            // Kalalau Trail, Kauai, Hawaii
+            MaplyCoordinateMakeWithDegrees(-159.357956, 21.967581)
         ]
         
         let icon = UIImage(named: "mountain_icon.png")
@@ -135,9 +127,13 @@ class ViewController: UIViewController,
                 addAnnotation(title: title, subtitle: subtitle, loc: loc)
             }
         }
-        else if selectedObject is MaplyScreenMarker {
+        else if selectedObject is MaplyScreenMarker, let selectedObject = selectedObject as? MaplyScreenMarker {
+            let markerX = selectedObject.loc.x
+            print(markerX)
+            UserDefaults.standard.set(markerX, forKey: "Key")
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "MarkerViewController") as! MarkerViewController
-            self.present(vc, animated: true, completion: nil)
+            present(vc, animated: true, completion: nil)
+            
         }
     }
 
