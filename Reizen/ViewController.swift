@@ -36,7 +36,6 @@ class ViewController: UIViewController,
         // add the capability to use the local tiles or remote tiles
         let useLocalTiles = false
 
-        // we'll need this layer in a second
         let layer: MaplyQuadImageTilesLayer
 
         if useLocalTiles {
@@ -65,6 +64,7 @@ class ViewController: UIViewController,
         
         }
         
+        // set globe properties
         layer.handleEdges = true
         layer.coverPoles = true
         layer.requireElev = false
@@ -90,15 +90,18 @@ class ViewController: UIViewController,
             MaplyCoordinateMakeWithDegrees(-159.357956, 21.967581)
         ]
         
+        // mountain icon
         let icon = UIImage(named: "mountain_icon.png")
         
+        // enable user interaction on icon
         icon?.accessibilityRespondsToUserInteraction = true;
         
-        
+        // map markers on globe using coordinates in locations[]
         let markers = locations.map { cap -> MaplyScreenMarker in
                 let marker = MaplyScreenMarker()
                 marker.image = icon
                 marker.loc = cap
+                // size of marker
                 marker.size = CGSize(width: 40,height: 40)
                 return marker
         
@@ -108,6 +111,7 @@ class ViewController: UIViewController,
         
     }
     
+    // display annotation on tap
     private func addAnnotation(title: String, subtitle: String, loc: MaplyCoordinate) {
         theViewC?.clearAnnotations()
         
@@ -118,7 +122,9 @@ class ViewController: UIViewController,
         theViewC?.addAnnotation(a, forPoint: loc, offset: CGPoint.zero)
     }
     
+    // handle user selection on globe
     private func markerSelection(selectedObject: NSObject) {
+        // when user does not select screen marker..
         if let selectedObject = selectedObject as? MaplyVectorObject {
             let loc = selectedObject.centroid()
             if loc.x != kMaplyNullCoordinate.x {
@@ -127,24 +133,30 @@ class ViewController: UIViewController,
                 addAnnotation(title: title, subtitle: subtitle, loc: loc)
             }
         }
+        // when the user selects a screen marker..
         else if selectedObject is MaplyScreenMarker, let selectedObject = selectedObject as? MaplyScreenMarker {
             let markerX = selectedObject.loc.x
             print(markerX)
+            // send marker x-value to MarkerViewController
             UserDefaults.standard.set(markerX, forKey: "Key")
+            // programmatically display MarkerViewController
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "MarkerViewController") as! MarkerViewController
+            // present vc
             present(vc, animated: true, completion: nil)
             
         }
     }
 
+    // handle what annotation displays on user not tapping a screen marker
     func globeViewController(_ viewC: WhirlyGlobeViewController, didTapAt coord: MaplyCoordinate) {
+        // show user coords
         let subtitle = NSString(format: "(%.2fN, %.2fE)", coord.y*57.296, coord.x*57.296) as String
         addAnnotation(title: "Tap!", subtitle: subtitle, loc: coord)
     }
     
+    // handle when user selects screen marker
     func globeViewController(_ viewC: WhirlyGlobeViewController, didSelect selectedObject: NSObject) {
         markerSelection(selectedObject: selectedObject)
     }
     
 }
-// test change for test commit.
