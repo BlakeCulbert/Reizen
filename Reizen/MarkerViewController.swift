@@ -38,11 +38,18 @@ class MarkerViewController: UIViewController {
             
             // get data
             getHikeData(hikeName: hikeName, imageList: imageList)
+        
+        // Kalalau Trail
+        case -2.781321:
             
+            let imageList = ["images/kalalau1.jpg", "images/kalalau2.jpg"]
+            let hikeName = "Kalalau"
+            
+            getHikeData(hikeName: hikeName, imageList: imageList)
             
         // default case
         default:
-            print("no")
+            print(markerX)
         }
         // Do any additional setup after loading the view.
     }
@@ -87,7 +94,8 @@ class MarkerViewController: UIViewController {
         
         // collect hike length from database
         dataRef.child("\(hikeName)/length").observeSingleEvent(of: .value, with: { (snapshot) in
-            self.length.text = snapshot.value as? String
+            let dataLen = snapshot.value as! String
+            self.length.text = "Length: \(dataLen)"
         })
         
     }

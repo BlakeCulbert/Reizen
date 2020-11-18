@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		305832332563A2100018937F /* bk2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 305832322563A20F0018937F /* bk2.jpg */; };
 		3084FD4E253FF15C0095EB34 /* WhirlyGlobeMaplyComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3084FD4D253FF15C0095EB34 /* WhirlyGlobeMaplyComponent.framework */; };
 		3084FD50253FF17B0095EB34 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3084FD4F253FF17B0095EB34 /* CoreLocation.framework */; };
 		3084FD52253FF1B30095EB34 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3084FD51253FF1B30095EB34 /* libc++.tbd */; };
@@ -52,6 +53,7 @@
 		1615DA39684ECA51584D89AF /* Pods-ReizenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReizenTests.debug.xcconfig"; path = "Target Support Files/Pods-ReizenTests/Pods-ReizenTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2948601C98357EE9D26413C9 /* Pods_Reizen_ReizenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reizen_ReizenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1FF7954D864068FDDBED1D /* Pods-Reizen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reizen.release.xcconfig"; path = "Target Support Files/Pods-Reizen/Pods-Reizen.release.xcconfig"; sourceTree = "<group>"; };
+		305832322563A20F0018937F /* bk2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bk2.jpg; path = ../../bk2.jpg; sourceTree = "<group>"; };
 		3084FD4D253FF15C0095EB34 /* WhirlyGlobeMaplyComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WhirlyGlobeMaplyComponent.framework; path = "WhirlyGlobe-Maply_Distribution_2_5/WhirlyGlobeMaplyComponent.framework"; sourceTree = "<group>"; };
 		3084FD4F253FF17B0095EB34 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3084FD51253FF1B30095EB34 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -169,6 +171,7 @@
 				30D423FF2536B57F0078409E /* Info.plist */,
 				3084FD84255257CA0095EB34 /* mountain_icon.png */,
 				30EEDA35255DCA84009CD277 /* GoogleService-Info.plist */,
+				305832322563A20F0018937F /* bk2.jpg */,
 			);
 			path = Reizen;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				30D423FE2536B57F0078409E /* LaunchScreen.storyboard in Resources */,
 				30D423FB2536B57F0078409E /* Assets.xcassets in Resources */,
 				30D423F92536B57E0078409E /* Main.storyboard in Resources */,
+				305832332563A2100018937F /* bk2.jpg in Resources */,
 				30EEDA36255DCA84009CD277 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
