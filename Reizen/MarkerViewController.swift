@@ -46,7 +46,71 @@ class MarkerViewController: UIViewController {
             let hikeName = "Kalalau"
             
             getHikeData(hikeName: hikeName, imageList: imageList)
+        
+        // Greenstone
+        case -1.5537822:
             
+            let imageList = ["images/greenstone1.jpg", "images/greenstone2.jpg"]
+            let hikeName = "Greenstone"
+            
+            getHikeData(hikeName: hikeName, imageList: imageList)
+        
+        // Panorama Ridge
+        case -2.1461728:
+            
+            let imageList = ["images/panorama1.jpg", "images/panorama2.jpg"]
+            let hikeName = "Panorama"
+            
+            getHikeData(hikeName: hikeName, imageList: imageList)
+            
+        // Old Rag
+        case -1.3722973:
+            
+            let imageList = ["images/oldrag1.jpg", "images/oldrag2.jpg"]
+            let hikeName = "OldRag"
+            
+            getHikeData(hikeName: hikeName, imageList: imageList)
+            
+        // South Maroon Peak
+        case -1.8353447:
+            
+            let imageList = ["images/maroonpeak1.jpg", "images/maroonpeak2.jpg"]
+            let hikeName = "MaroonPeak"
+            
+            getHikeData(hikeName: hikeName, imageList: imageList)
+            
+        // Grand Canyon
+        case -1.956741:
+            
+            let imageList = ["images/grandcanyon1.jpg", "images/grandcanyon2.jpeg"]
+            let hikeName = "GrandCanyon"
+            
+            getHikeData(hikeName: hikeName, imageList: imageList)
+            
+        // Lares Trek
+        case -1.2574031:
+            
+            let imageList = ["images/lares1.jpg", "images/lares2.jpg"]
+            let hikeName = "Lares"
+            
+            getHikeData(hikeName: hikeName, imageList: imageList)
+            
+        // Paine Circuit
+        case -1.2818245:
+            
+            let imageList = ["images/paine1.jpg", "images/paine2.jpg"]
+            let hikeName = "Paine"
+            
+            getHikeData(hikeName: hikeName, imageList: imageList)
+            
+        // Fisherfields
+        case -0.095604025:
+            
+            let imageList = ["images/fisherfield1.jpg", "images/fisherfield2.jpg"]
+            let hikeName = "Fisherfields"
+            
+            getHikeData(hikeName: hikeName, imageList: imageList)
+        
         // default case
         default:
             print(markerX)

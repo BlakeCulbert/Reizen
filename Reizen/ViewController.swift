@@ -87,7 +87,24 @@ class ViewController: UIViewController,
             // Wonderland Trail, Mount Rainier National Park, Washington
             MaplyCoordinateMakeWithDegrees(-121.818070, 46.737700),
             // Kalalau Trail, Kauai, Hawaii
-            MaplyCoordinateMakeWithDegrees(-159.357956, 21.967581)
+            MaplyCoordinateMakeWithDegrees(-159.357956, 21.967581),
+            // Panorama Ridge, British Columbia, Canada
+            MaplyCoordinateMakeWithDegrees(-122.966640, 50.107860),
+            // South Maroon Peak, Colorado
+            MaplyCoordinateMakeWithDegrees(-105.157500, 39.917450),
+            // Lares Trek, Peru
+            MaplyCoordinateMakeWithDegrees(-72.043890, -13.103610),
+            // Paine Circuit Trek, Chile
+            MaplyCoordinateMakeWithDegrees(-73.443134, -51.010239),
+            // Greenstone Ridge Trail, Michigan
+            MaplyCoordinateMakeWithDegrees(-89.025165, 47.949542),
+            // Old Rag, Virginia
+            MaplyCoordinateMakeWithDegrees(-78.626842, 38.481508),
+            // Fisherfield Round, Scotland
+            MaplyCoordinateMakeWithDegrees(-5.477707, 57.74928),
+            // Grand Canyon, Arizona
+            MaplyCoordinateMakeWithDegrees(-112.112997, 36.106965)
+            
         ]
         
         // mountain icon
