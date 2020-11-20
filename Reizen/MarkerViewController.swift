@@ -164,6 +164,23 @@ class MarkerViewController: UIViewController {
         
     }
     
+    // use this function to test data collection from database
+    private func testDataCollection() {
+        // list of hike lengths and their corresponding hikes
+        let hikeNames = ["19.4":"Fisherfields", "24":"GrandCanyon", "42":"Greenstone", "11":"Kalalau", "22":"Lares", "10.9":"MaroonPeak", "9.2":"OldRag", "80":"Paine", "18.6":"Panorama", "93":"WonderlandTrail"]
+        
+        // loop through hikeNames to ensure given length and length from database are equal
+        for (length, hike) in hikeNames {
+            // get length from database
+            dataRef.child("\(hike)/length").observeSingleEvent(of: .value, with: { (snapshot) in
+                let dataLen = snapshot.value as! String
+                // check if equal
+                print("Given Length: \(length) - Length from Database: \(dataLen)")
+            })
+        }
+        
+    }
+    
     /*
     // MARK: - Navigation
 
