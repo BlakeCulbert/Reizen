@@ -1,2 +1,2 @@
 # Reizen
-A swift hiking app
+A swift hiking application
