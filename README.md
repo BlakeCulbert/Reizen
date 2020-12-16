@@ -1,2 +1,2 @@
 # Reizen
-A swift hiking application
+A swift hiking application. Reizen uses an interactive globe (from WhirlyGlobe) which includes screen markers that represent locations of hikes. When pressed, these screen markers display a new view controller with information about the correlated hike location including: the hike name, location, description, length, and two pictures. Reizen is connected with Firebase realtime database and storage to retreive the information and images of the hikes.  
